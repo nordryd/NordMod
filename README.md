@@ -1,2 +1,0 @@
-# NordMod
-Minecraft modding adventures
