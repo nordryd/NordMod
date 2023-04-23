@@ -1,4 +1,6 @@
 {
   "item.nordmod.citrine": "Citrine",
-  "item.nordmod.raw_citrine": "Raw Citrine"
+  "item.nordmod.raw_citrine": "Raw Citrine",
+
+  "block.nordmod.citrine_block": "Citrine Block"
 }

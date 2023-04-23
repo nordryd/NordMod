@@ -170,15 +170,19 @@ test {
     useJUnitPlatform()
 }
 
+ext{
+    jupiterVersion = "5.9.2"
+}
+
 dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.18.1-39.1.0'
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$jupiterVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-params:$jupiterVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$jupiterVersion"
 
     testImplementation 'org.mockito:mockito-junit-jupiter:5.2.0'
 
