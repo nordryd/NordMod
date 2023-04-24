@@ -2,5 +2,12 @@
   "item.nordmod.citrine": "Citrine",
   "item.nordmod.raw_citrine": "Raw Citrine",
 
-  "block.nordmod.citrine_block": "Citrine Block"
+  "block.nordmod.citrine_block": "Citrine Block",
+  "block.nordmod.raw_citrine_block": "Raw Citrine Block",
+  "block.nordmod.citrine_ore": "Citrine Ore",
+  "block.nordmod.deepslate_citrine_ore": "Deepslate Citrine Ore",
+  "block.nordmod.netherrack_citrine_ore": "Netherrack Citrine Ore",
+  "block.nordmod.endstone_citrine_ore": "Endstone Citrine Ore",
+
+  "itemGroup.nordmod_tab": "NordMod"
 }
