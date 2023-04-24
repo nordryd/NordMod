@@ -47,3 +47,30 @@
 ### Troubleshooting
 * **The block has a texture in the inventory, but not in the real world.**
   * Check your blockstate json, if it exists and is correct.
+
+# Block Behaviour
+The `Blocks` class can be accessed to view how every block in minecraft is defined for perspective on basic behaviors like material, strength, and sound. Clarifications on more confusing properties and their interactions are detailed below.
+
+## Defining a "correct tool" for drop
+```java
+BlockBehaviour.Properties#requiresCorrectToolForDrops()
+```
+A block with this behavior requires a specific tool and/or minimum tool tier to be successfully mined. See `loot_tables.md` to learn how to define drops from blocks.
+
+#### Defining the correct Tool Type (Pickaxe, Axe, Shovel, Hoe, etc.)
+1. In `resources` go to `data.minecraft.tags.blocks.mineable`.
+2. Find the JSON file of the tool that should be used to properly mine the block.
+3. Add the block to the `"values"` array.
+  * _e.g._ To add the Citrine Block, add `"nordmod:citrine_block"`.
+
+#### Defining the minimum Tool Tier (Stone, Iron, Diamond, etc.)
+1. In `resources` go to `data.minecraft.tags.blocks`.
+2. Find the JSON file titled `needs_<tier>_tool.json` where `<tier>` is the material you want the tool to be made of.
+  * _e.g._ Blocks that require diamond tools are in `needs_diamond_tool.json`.
+3. Add the block to the `"values"` array.
+  * _e.g._ To add the Citrine Block, add `"nordmod:citrine_block"`.
+
+Altogether, _e.g._, to make it so a Citrine Block requires an Iron Pickaxe (or greater):
+1. Add `"nordmod:citrine_block"` to `pickaxe.json`.
+2. Add `"nordmod:citrine_block"` to `needs_iron_tool.json`.
+3. When defining the `BlockBehaviour` for the block, add `.requiresCorrectToolForDrops()`.

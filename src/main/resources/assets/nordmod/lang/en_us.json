@@ -1,6 +1,7 @@
 {
   "item.nordmod.citrine": "Citrine",
   "item.nordmod.raw_citrine": "Raw Citrine",
+  "item.nordmod.dowsing_rod": "Dowsing Rod",
 
   "block.nordmod.citrine_block": "Citrine Block",
   "block.nordmod.raw_citrine_block": "Raw Citrine Block",
@@ -9,5 +10,7 @@
   "block.nordmod.netherrack_citrine_ore": "Netherrack Citrine Ore",
   "block.nordmod.endstone_citrine_ore": "Endstone Citrine Ore",
 
-  "itemGroup.nordmod_tab": "NordMod"
+  "itemGroup.nordmod_tab": "NordMod",
+
+  "item.nordmod.dowsing_rod.no_valuables": "No valuables were found"
 }
