@@ -1,4 +1,4 @@
-## Creating a Mod Item
+# Creating a Mod Item
 #### 1. In `ModItems`, create a new `ModItem`:
 ```java
 public static final Item MOD_ITEM_NAME = new ModItem("mod_item_name", new Item.Properties())

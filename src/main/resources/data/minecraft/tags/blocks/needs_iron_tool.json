@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "nordmod:citrine_ore",
+    "nordmod:citrine_block",
+    "nordmod:raw_citrine_block",
+    "nordmod:deepslate_citrine_ore",
+    "nordmod:netherrack_citrine_ore",
+    "nordmod:endstone_citrine_ore"
+  ]
+}

@@ -1,4 +1,4 @@
-## Creating a Mod Block
+# Creating a Mod Block
 #### 1. In `ModBlocks`, create a new `ModBlock`:
 ```java
     public static final Block MOD_BLOCK_NAME = new ModBlock("mod_block_name", CreativeTab,

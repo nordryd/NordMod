@@ -1,4 +1,4 @@
-## Creating a new Creative Tab
+# Creating a Mod Creative Tab
 #### 1. In `ModCreativeModeTab`, create a new `CreativeModeTab`:
 ```java
 public static final CreativeModeTab MOD_CREATIVE_MODE_TAB = new CreativeModeTab("mod_creative_mode_tab") {
