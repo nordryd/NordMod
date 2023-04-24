@@ -6,7 +6,8 @@ import net.nordryd.nordmod.item.ModItems;
 
 public abstract class ModCreativeModeTab
 {
-    public static final CreativeModeTab NORDMOD_TAB = new CreativeModeTab("nordmod_tab") {
+    public static final CreativeModeTab NORDMOD_TAB = new CreativeModeTab("nordmod_tab")
+    {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.CITRINE);
