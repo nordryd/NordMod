@@ -15,8 +15,8 @@ import net.nordryd.nordmod.block.ModBlock;
  */
 public class SpeedyBlock extends ModBlock
 {
-    public SpeedyBlock(final String name, final CreativeModeTab creativeModeTab, final Properties blockProperties) {
-        super(name, creativeModeTab, blockProperties);
+    public SpeedyBlock(final String name, final CreativeModeTab creativeModeTab, final Properties blockProperties, final String tooltipKey) {
+        super(name, creativeModeTab, blockProperties, tooltipKey);
     }
 
     @Override

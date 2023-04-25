@@ -2,15 +2,21 @@ package net.nordryd.nordmod.item.custom;
 
 import java.util.List;
 
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.nordryd.nordmod.item.ModItem;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Click on a block with this item, and it will tell you if any block below it is a valuable block and output the coordinates.
@@ -53,6 +59,16 @@ public class DowsingRodItem extends ModItem
                 .hurtAndBreak(1, useOnContext.getPlayer(), (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
 
         return super.useOn(useOnContext);
+    }
+
+    @Override
+    public void appendHoverText(final ItemStack itemStack, @Nullable final Level pLevel, final List<Component> tooltipComponents,
+            final TooltipFlag pIsAdvanced) {
+        if(Screen.hasShiftDown()){
+            tooltipComponents.add(new TranslatableComponent("tooltip.nordmod.dowsing_rod.tooltip.shift"));
+        }else{
+            tooltipComponents.add(new TranslatableComponent("tooltip.nordmod.dowsing_rod.tooltip"));
+        }
     }
 
     private void outputValuableCoordinates(final BlockPos blockPos, final Player player, final Block blockBelow) {

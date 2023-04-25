@@ -27,8 +27,16 @@ public abstract class ModBlocks
     public static final Block ENDSTONE_CITRINE_ORE = new ModBlock("endstone_citrine_ore", ModCreativeModeTab.NORDMOD_TAB,
             BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops());
 
+    // Make this just a creepy block. A creepy sound effect should play. Animated texture should fade the colors between red and black :)
+    // This could just be a block of static (and renamed as such, something creepy)
+    // name ideas: redacted, not found, 404
+    public static final Block UNKNOWN = new ModBlock("unknown", ModCreativeModeTab.NORDMOD_TAB,
+            BlockBehaviour.Properties.of(Material.AMETHYST).strength(20f).requiresCorrectToolForDrops(),
+            "tooltip.nordmod.block.unknown");
+
     public static final Block SPEEDY_BLOCK = new SpeedyBlock("speedy_block", ModCreativeModeTab.NORDMOD_TAB,
-            BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops());
+            BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops(),
+            "tooltip.nordmod.block.speedy_block");
 
     public static void register(final IEventBus eventBus) {
         BLOCKS.register(eventBus);
