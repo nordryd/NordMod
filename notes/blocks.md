@@ -44,18 +44,30 @@
 ### Notes
 * `ModBlocks` serves as the reference for your mod items, in the same way that `Blocks` is the reference for Minecraft's vanilla blocks.
 
-### Troubleshooting
-* **The block has a texture in the inventory, but not in the real world.**
-  * Check your blockstate json, if it exists and is correct.
+# Advanced Blocks
+These involve blocks with their own classes.
 
-# Block Behaviour
-The `Blocks` class can be accessed to view how every block in minecraft is defined for perspective on basic behaviors like material, strength, and sound. Clarifications on more confusing properties and their interactions are detailed below.
+1. Create a new class for the item:
+```java
+public class CustomModBlock extends ModBlock{
+    public CustomModBlock(final String name, final Properties itemProperties){
+        super(name, itemProperties);
+    }
+}
+```
+* It's best practice to end a block's class name with `Block`.
+2. Override and implement whatever methods you want. You can click into the `Block` class and `IForgeBlock` interface to see a bunch of methods you can override to create the behavior you want. The world is your oyster! Be creative!
+   * If you override a deprecated method, this shouldn't be an issue as long as you don't call `super`. 
+
+
+# Block Behaviour Properties
+The `Blocks` class can be accessed to view how every block in minecraft is defined for perspective on basic properties like material, strength, and sound. Clarifications on more confusing properties and their interactions are detailed below.
 
 ## Defining a "correct tool" for drop
 ```java
 BlockBehaviour.Properties#requiresCorrectToolForDrops()
 ```
-A block with this behavior requires a specific tool and/or minimum tool tier to be successfully mined. See `loot_tables.md` to learn how to define drops from blocks.
+A block with this property requires a specific tool and/or minimum tool tier to be successfully mined. See `loot_tables.md` to learn how to define drops from blocks.
 
 #### Defining the correct Tool Type (Pickaxe, Axe, Shovel, Hoe, etc.)
 1. In `resources` go to `data.minecraft.tags.blocks.mineable`.
@@ -74,3 +86,7 @@ Altogether, _e.g._, to make it so a Citrine Block requires an Iron Pickaxe (or g
 1. Add `"nordmod:citrine_block"` to `pickaxe.json`.
 2. Add `"nordmod:citrine_block"` to `needs_iron_tool.json`.
 3. When defining the `BlockBehaviour` for the block, add `.requiresCorrectToolForDrops()`.
+
+# Troubleshooting
+* **The block has a texture in the inventory, but not in the real world.**
+  * Check your blockstate json, if it exists and is correct.
