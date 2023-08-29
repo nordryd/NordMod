@@ -1,3 +1,5 @@
+# This is from 1.18 and may be outdated
+
 # Creating a Mod Item
 #### 1. In `ModItems`, create a new `ModItem`:
 ```java

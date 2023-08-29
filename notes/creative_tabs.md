@@ -1,3 +1,5 @@
+# This is from 1.18 and may be outdated
+
 # Creating a Mod Creative Tab
 #### 1. In `ModCreativeModeTab`, create a new `CreativeModeTab`:
 ```java

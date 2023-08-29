@@ -1,3 +1,5 @@
+# This is from 1.18 and may be outdated
+
 # Loot Tables
 * Another case where we go to the minecraft vanilla package.
   * This will be especially useful because the loot tables can look a bit intimidating. Just refer to examples to and edit accordingly to create your loot tables.

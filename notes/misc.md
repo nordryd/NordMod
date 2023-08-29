@@ -1,3 +1,5 @@
+# This is from 1.18 and may be outdated
+
 # Translatable Text
 Wherever possible, it's best practice to use the `TranslatableComponent` class with a mapping to the lang files so all your messages are in one place, and you can easily define translations.
 

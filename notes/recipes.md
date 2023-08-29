@@ -1,3 +1,5 @@
+# This is from 1.18 and may be outdated
+
 # Recipes
 1. Go to `External Libraries` and find `net.minecraft:client:extra:<minecraft version>`
 2. Expand it and find `data.minecraft.recipes`. This directory has all the recipes in the game and their templates.

@@ -1,3 +1,5 @@
+# This is from 1.18 and may be outdated
+
 # Creating a Mod Block
 #### 1. In `ModBlocks`, create a new `ModBlock`:
 ```java

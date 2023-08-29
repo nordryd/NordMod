@@ -2,10 +2,13 @@ package net.nordryd.nordmod;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.nordryd.nordmod.creativeTabs.ModCreativeModeTabs;
+import net.nordryd.nordmod.item.ModItems;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,20 +18,30 @@ public class NordMod
 {
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
-
     public static final String MOD_ID = "nordmod";
 
     public NordMod() {
         // Register the setup method for modloading
-        final IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        eventBus.addListener(this::setup);
+        ModItems.register(modEventBus);
+
+        modEventBus.addListener(this::commonSetup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        modEventBus.addListener(this::addCreative);
     }
 
-    private void setup(final FMLCommonSetupEvent event) {
+    private void addCreative(final CreativeModeTabEvent.BuildContents event) {
+        if (event.getTab() == ModCreativeModeTabs.NORDMOD_ITEMS) {
+            event.accept(ModItems.BLACK_OPAL);
+            event.accept(ModItems.RAW_BLACK_OPAL);
+        }
+    }
+
+    private void commonSetup(final FMLCommonSetupEvent event) {
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getName());
     }
