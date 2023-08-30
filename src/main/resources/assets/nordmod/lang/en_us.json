@@ -18,5 +18,9 @@
   "block.nordmod.sound_block": "Sound Block",
 
   "creativemodetab.nordmod_items_tab": "NordMod Items",
-  "creativemodetab.nordmod_blocks_tab": "NordMod Blocks"
+  "creativemodetab.nordmod_blocks_tab": "NordMod Blocks",
+
+  "tooltip.nordmod.metal_detector.tooltip": "Press $eSHIFT$r for more info",
+  "tooltip.nordmod.metal_detector.tooltip.shift": "Right-click on blocks to find valuables below!",
+  "tooltip.nordmod.sound_block": "Plays nice sounds when walking or right-clicking. Try crouching and right-clicking!"
 }
