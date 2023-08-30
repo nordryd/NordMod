@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nordryd.nordmod.NordMod;
+import net.nordryd.nordmod.item.custom.MetalDetectorItem;
 
 public class ModItems
 {
@@ -16,6 +17,9 @@ public class ModItems
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_ALEXANDRITE = registerModItem("raw_alexandrite",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> METAL_DETECTOR = registerModItem("metal_detector",
+            () -> new MetalDetectorItem(new Item.Properties().durability(512)));
+
     private static <T extends Item> RegistryObject<T> registerModItem(final String name,
             final Supplier<T> itemSupplier) {
         return MOD_ITEMS.register(name, itemSupplier);

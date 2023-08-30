@@ -20,6 +20,7 @@ public class ModCreativeModeTabs
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.ALEXANDRITE.get());
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
+                        output.accept(ModItems.METAL_DETECTOR.get());
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> NORDMOD_BLOCKS_TAB = MOD_CREATIVE_MODE_TABS.register(
