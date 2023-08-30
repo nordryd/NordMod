@@ -20,6 +20,8 @@ public class ModCreativeModeTabs
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.ALEXANDRITE.get());
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
+                        output.accept(ModItems.KOHLRABI.get());
+                        output.accept(ModItems.PEAT_BRICK.get());
                         output.accept(ModItems.METAL_DETECTOR.get());
                     }).build());
 

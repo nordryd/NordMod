@@ -1,7 +1,10 @@
 {
   "item.nordmod.alexandrite": "Alexandrite",
   "item.nordmod.raw_alexandrite": "Raw Alexandrite",
+  "item.nordmod.kohlrabi": "Kohlrabi",
+  "item.nordmod.peat_brick": "Peat Brick",
   "item.nordmod.metal_detector": "Metal Detector",
+
   "item.nordmod.metal_detector.no_valuables_found": "No valuable metals found",
   "item.nordmod.metal_detector.no_valuables_found": "No valuable metals found",
   "item.nordmod.metal_detector.valuable_found": "%s found at (%s, %s, %s)!",
