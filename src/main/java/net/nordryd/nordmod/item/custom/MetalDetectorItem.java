@@ -14,8 +14,8 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.nordryd.nordmod.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 public class MetalDetectorItem extends Item
@@ -33,7 +33,7 @@ public class MetalDetectorItem extends Item
 
             for (int blocksBelow = 0; blocksBelow <= positionClicked.getY() && !foundBlock; blocksBelow++) {
                 final BlockState blockState = pContext.getLevel().getBlockState(positionClicked.below(blocksBelow));
-                if (isValuableBlock(blockState.getBlock())) {
+                if (isValuableBlock(blockState)) {
                     outputValuableMetalPosition(positionClicked.below(blocksBelow), player, blockState.getBlock());
                     foundBlock = true;
                 }
@@ -72,9 +72,7 @@ public class MetalDetectorItem extends Item
                         blockPos.getX(), blockPos.getY(), blockPos.getZ()));
     }
 
-    private boolean isValuableBlock(final Block block) {
-        return List.of(Blocks.IRON_ORE, Blocks.DEEPSLATE_IRON_ORE, Blocks.DIAMOND_ORE, Blocks.DEEPSLATE_DIAMOND_ORE,
-                        Blocks.GOLD_BLOCK, Blocks.DEEPSLATE_GOLD_ORE, Blocks.EMERALD_ORE, Blocks.DEEPSLATE_EMERALD_ORE)
-                .contains(block);
+    private boolean isValuableBlock(final BlockState blockState) {
+        return blockState.is(ModTags.Blocks.METAL_DETECTOR_VALUABLES);
     }
 }
