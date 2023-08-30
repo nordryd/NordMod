@@ -14,6 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nordryd.nordmod.NordMod;
+import net.nordryd.nordmod.block.custom.SoundBlock;
 import net.nordryd.nordmod.item.ModItems;
 
 public class ModBlocks
@@ -41,6 +42,9 @@ public class ModBlocks
             () -> new DropExperienceBlock(
                     BlockBehaviour.Properties.copy(Blocks.END_STONE).strength(5f).requiresCorrectToolForDrops(),
                     UniformInt.of(5, 8)));
+
+    public static final RegistryObject<Block> SOUND_BLOCK = registerModBlock("sound_block",
+            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(5f)));
 
     private static <T extends Block> RegistryObject<T> registerModBlock(final String name,
             final Supplier<T> blockSupplier) {

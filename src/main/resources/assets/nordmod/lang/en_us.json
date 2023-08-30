@@ -3,6 +3,7 @@
   "item.nordmod.raw_alexandrite": "Raw Alexandrite",
   "item.nordmod.metal_detector": "Metal Detector",
   "item.nordmod.metal_detector.no_valuables_found": "No valuable metals found",
+  "item.nordmod.metal_detector.no_valuables_found": "No valuable metals found",
   "item.nordmod.metal_detector.valuable_found": "%s found at (%s, %s, %s)!",
 
   "block.nordmod.alexandrite_block": "Alexandrite Block",
@@ -11,6 +12,7 @@
   "block.nordmod.deepslate_alexandrite_ore": "Deepslate Alexandrite Ore",
   "block.nordmod.netherrack_alexandrite_ore": "Netherrack Alexandrite Ore",
   "block.nordmod.endstone_alexandrite_ore": "Endstone Alexandrite Ore",
+  "block.nordmod.sound_block": "Sound Block",
 
   "creativemodetab.nordmod_items_tab": "NordMod Items",
   "creativemodetab.nordmod_blocks_tab": "NordMod Blocks"

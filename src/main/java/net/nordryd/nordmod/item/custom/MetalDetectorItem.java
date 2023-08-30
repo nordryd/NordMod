@@ -20,14 +20,14 @@ public class MetalDetectorItem extends Item
     }
 
     @Override
-    public InteractionResult useOn(final UseOnContext useOnContext) {
-        if (!useOnContext.getLevel().isClientSide()) {
-            final BlockPos positionClicked = useOnContext.getClickedPos();
-            final Player player = useOnContext.getPlayer();
+    public InteractionResult useOn(final UseOnContext pContext) {
+        if (!pContext.getLevel().isClientSide()) {
+            final BlockPos positionClicked = pContext.getClickedPos();
+            final Player player = pContext.getPlayer();
             boolean foundBlock = false;
 
             for (int blocksBelow = 0; blocksBelow <= positionClicked.getY() && !foundBlock; blocksBelow++) {
-                final BlockState blockState = useOnContext.getLevel().getBlockState(positionClicked.below(blocksBelow));
+                final BlockState blockState = pContext.getLevel().getBlockState(positionClicked.below(blocksBelow));
                 if (isValuableBlock(blockState.getBlock())) {
                     outputValuableMetalPosition(positionClicked.below(blocksBelow), player, blockState.getBlock());
                     foundBlock = true;
@@ -39,7 +39,7 @@ public class MetalDetectorItem extends Item
             }
         }
 
-        useOnContext.getItemInHand().hurtAndBreak(1, useOnContext.getPlayer(),
+        pContext.getItemInHand().hurtAndBreak(1, pContext.getPlayer(),
                 player -> player.broadcastBreakEvent(player.getUsedItemHand()));
 
         return InteractionResult.SUCCESS;

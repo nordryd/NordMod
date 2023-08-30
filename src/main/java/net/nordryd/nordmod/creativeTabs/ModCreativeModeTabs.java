@@ -34,5 +34,6 @@ public class ModCreativeModeTabs
                         output.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get());
                         output.accept(ModBlocks.NETHERRACK_ALEXANDRITE_ORE.get());
                         output.accept(ModBlocks.ENDSTONE_ALEXANDRITE_ORE.get());
+                        output.accept(ModBlocks.SOUND_BLOCK.get());
                     }).build());
 }
