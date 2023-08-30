@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "nordmod:alexandrite_block",
+    "nordmod:raw_alexandrite_block",
+    "nordmod:alexandrite_ore",
+    "nordmod:deepslate_alexandrite_ore",
+    "nordmod:netherrack_alexandrite_ore",
+    "nordmod:endstone_alexandrite_ore"
+  ]
+}

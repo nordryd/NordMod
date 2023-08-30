@@ -1,6 +1,14 @@
 {
-  "item.nordmod.black_opal": "Black Opal",
-  "item.nordmod.raw_black_opal": "Raw Black Opal",
+  "item.nordmod.alexandrite": "Alexandrite",
+  "item.nordmod.raw_alexandrite": "Raw Alexandrite",
 
-  "creativemodetab.nordmod_items": "NordMod Items"
+  "block.nordmod.alexandrite_block": "Alexandrite Block",
+  "block.nordmod.raw_alexandrite_block": "Raw Alexandrite Block",
+  "block.nordmod.alexandrite_ore": "Alexandrite Ore",
+  "block.nordmod.deepslate_alexandrite_ore": "Deepslate Alexandrite Ore",
+  "block.nordmod.netherrack_alexandrite_ore": "Netherrack Alexandrite Ore",
+  "block.nordmod.endstone_alexandrite_ore": "Endstone Alexandrite Ore",
+
+  "creativemodetab.nordmod_items_tab": "NordMod Items",
+  "creativemodetab.nordmod_blocks_tab": "NordMod Blocks"
 }

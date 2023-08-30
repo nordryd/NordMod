@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "nordmod:item/black_opal"
+    "layer0": "nordmod:item/alexandrite"
   }
 }
