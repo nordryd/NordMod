@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "alexandrite",
+  "ingredient": {
+    "item": "nordmod:netherrack_alexandrite_ore"
+  },
+  "result": "nordmod:alexandrite"
+}

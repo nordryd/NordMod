@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "nordmod:block/netherrack_alexandrite_ore"
-  }
-}
