@@ -32,14 +32,18 @@ public class ModBlockTagsProvider extends BlockTagsProvider
                 .add(ModBlocks.ALEXANDRITE_ORE.get())
                 .add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get())
                 .add(ModBlocks.NETHERRACK_ALEXANDRITE_ORE.get())
-                .add(ModBlocks.ENDSTONE_ALEXANDRITE_ORE.get());
+                .add(ModBlocks.ENDSTONE_ALEXANDRITE_ORE.get())
+                .add(ModBlocks.ALEXANDRITE_STAIRS.get())
+                .add(ModBlocks.ALEXANDRITE_SLAB.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.ALEXANDRITE_ORE.get())
                 .add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get())
                 .add(ModBlocks.NETHERRACK_ALEXANDRITE_ORE.get())
-                .add(ModBlocks.ENDSTONE_ALEXANDRITE_ORE.get());
+                .add(ModBlocks.ENDSTONE_ALEXANDRITE_ORE.get())
+                .add(ModBlocks.ALEXANDRITE_STAIRS.get())
+                .add(ModBlocks.ALEXANDRITE_SLAB.get());
     }
 
     @Override

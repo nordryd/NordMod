@@ -6,9 +6,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.nordryd.nordmod.block.ModBlocks;
-import net.nordryd.nordmod.creativeTabs.ModCreativeModeTabs;
-import net.nordryd.nordmod.item.ModItems;
 import net.nordryd.nordmod.registry.RegistryHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,12 +15,13 @@ import org.apache.logging.log4j.Logger;
 public class NordMod
 {
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "nordmod";
 
     public NordMod() {
         // Register the setup method for modloading
-        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get()
+                .getModEventBus();
 
         RegistryHandler.registerModItems(modEventBus);
         RegistryHandler.registerBlocks(modEventBus);

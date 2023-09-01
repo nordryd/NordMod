@@ -17,22 +17,26 @@ public class ModBlockLootTables extends BlockLootSubProvider
 
     /**
      * If a block is created, it MUST have a loot table defined here unless it's built with the
-     * {@code noLootTable()} builder method. Otherwise an error will be thrown.
+     * {@code noLootTable()} builder method. Otherwise, an error will be thrown.
      */
     @Override
     protected void generate() {
-        this.dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
-        this.dropSelf(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
-        this.dropSelf(ModBlocks.SOUND_BLOCK.get());
+        dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
+        dropSelf(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+        dropSelf(ModBlocks.SOUND_BLOCK.get());
+        dropSelf(ModBlocks.ALEXANDRITE_STAIRS.get());
+        dropSelf(ModBlocks.SOUND_BLOCK.get());
 
-        this.add(ModBlocks.ALEXANDRITE_ORE.get(),
+        add(ModBlocks.ALEXANDRITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get()));
-        this.add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get(),
+        add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get()));
-        this.add(ModBlocks.NETHERRACK_ALEXANDRITE_ORE.get(),
+        add(ModBlocks.NETHERRACK_ALEXANDRITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.NETHERRACK_ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get()));
-        this.add(ModBlocks.ENDSTONE_ALEXANDRITE_ORE.get(),
+        add(ModBlocks.ENDSTONE_ALEXANDRITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.ENDSTONE_ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get()));
+
+        add(ModBlocks.ALEXANDRITE_SLAB.get(), block -> createSlabItemTable(ModBlocks.ALEXANDRITE_SLAB.get()));
     }
 
     @Override

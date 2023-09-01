@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_alexandrite_block": {
+    "has_raw_alexandrite": {
       "conditions": {
         "items": [
           {
             "items": [
-              "nordmod:alexandrite_block"
+              "nordmod:raw_alexandrite"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nordmod:alexandrite"
+        "recipe": "nordmod:alexandrite_smelting_raw_alexandrite"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_alexandrite_block",
+      "has_raw_alexandrite",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "nordmod:alexandrite"
+      "nordmod:alexandrite_smelting_raw_alexandrite"
     ]
   },
   "sends_telemetry_event": false

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_endstone_alexandrite_ore": {
+    "has_alexandrite_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "nordmod:endstone_alexandrite_ore"
+              "nordmod:alexandrite_block"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nordmod:alexandrite_from_blasting_endstone_alexandrite_ore"
+        "recipe": "nordmod:alexandrite_stairs_from_alexandrite_block_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_endstone_alexandrite_ore",
+      "has_alexandrite_block",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "nordmod:alexandrite_from_blasting_endstone_alexandrite_ore"
+      "nordmod:alexandrite_stairs_from_alexandrite_block_stonecutting"
     ]
   },
   "sends_telemetry_event": false

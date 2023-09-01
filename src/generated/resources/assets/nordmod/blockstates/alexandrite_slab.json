@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nordmod:block/alexandrite_slab"
+    },
+    "type=double": {
+      "model": "nordmod:block/alexandrite_block"
+    },
+    "type=top": {
+      "model": "nordmod:block/alexandrite_slab_top"
+    }
+  }
+}

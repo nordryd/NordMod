@@ -22,7 +22,6 @@ import net.nordryd.nordmod.datagen.providers.ModRecipeProvider;
 @Mod.EventBusSubscriber(modid = NordMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModDataGenerators
 {
-
     // This method fires at the "GatherData" event.
     @SubscribeEvent
     public static void gatherData(final GatherDataEvent gdEvent) {

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_netherrack_alexandrite_ore": {
+    "has_alexandrite_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "nordmod:netherrack_alexandrite_ore"
+              "nordmod:alexandrite_block"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nordmod:alexandrite_from_smelting_netherrack_alexandrite_ore"
+        "recipe": "nordmod:alexandrite_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_netherrack_alexandrite_ore",
+      "has_alexandrite_block",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "nordmod:alexandrite_from_smelting_netherrack_alexandrite_ore"
+      "nordmod:alexandrite_slab"
     ]
   },
   "sends_telemetry_event": false

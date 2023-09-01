@@ -1,6 +1,8 @@
-// 1.20	2023-08-30T18:54:06.1131541	Loot Tables
+// 1.20	2023-09-01T12:52:00.6543452	Loot Tables
 bd844eb563dc9e01ce8e83d492c7a3bb6bfba671 data/nordmod/loot_tables/blocks/alexandrite_block.json
 0e590bc91cfc8f1c299766e726ea2ffecd28b44a data/nordmod/loot_tables/blocks/alexandrite_ore.json
+86d5792a4dc5ab64a9731ab696efebc0c4fe56ef data/nordmod/loot_tables/blocks/alexandrite_slab.json
+07856a9511da64ec2ad41b0617a739185ae54bc5 data/nordmod/loot_tables/blocks/alexandrite_stairs.json
 17b17c97ffd5d91148ed769e03477767724d94c5 data/nordmod/loot_tables/blocks/deepslate_alexandrite_ore.json
 9e5ecb139b20321d3515e72a689ebab101fa9e30 data/nordmod/loot_tables/blocks/endstone_alexandrite_ore.json
 84a61ae323808186649e1a1d3a27a0cfff1774f6 data/nordmod/loot_tables/blocks/netherrack_alexandrite_ore.json
