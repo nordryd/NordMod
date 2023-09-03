@@ -70,6 +70,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.ALEXANDRITE_SLAB.get(),
                 ModBlocks.ALEXANDRITE_BLOCK.get(), 2);
 
+        pressurePlateBuilder(RecipeCategory.MISC, ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get(),
+                Ingredient.of(ModBlocks.ALEXANDRITE_BLOCK.get())).unlockedBy(
+                        AdvancementTriggers.HAS_ALEXANDRITE_BLOCK.getTriggerId(),
+                        AdvancementTriggers.HAS_ALEXANDRITE_BLOCK.getTriggers())
+                .save(pWriter);
+        buttonBuilder(ModBlocks.ALEXANDRITE_BUTTON.get(), Ingredient.of(ModItems.ALEXANDRITE.get())).unlockedBy(
+                        AdvancementTriggers.HAS_ALEXANDRITE.getTriggerId(), AdvancementTriggers.HAS_ALEXANDRITE.getTriggers())
+                .save(pWriter);
+
         oreSmelting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 200,
                 "alexandrite");
         oreBlasting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 100,

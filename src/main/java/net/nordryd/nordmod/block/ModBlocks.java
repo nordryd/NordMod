@@ -7,11 +7,14 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -55,13 +58,21 @@ public class ModBlocks
     // Stairs and slabs
     public static final RegistryObject<Block> ALEXANDRITE_STAIRS = registerModBlock("alexandrite_stairs",
             () -> new StairBlock(ALEXANDRITE_BLOCK.get()
-                    .defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.GRANITE_STAIRS)
+                    .defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.PRISMARINE_STAIRS)
                     .sound(SoundType.AMETHYST)
                     .strength(5f)));
     public static final RegistryObject<Block> ALEXANDRITE_SLAB = registerModBlock("alexandrite_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GRANITE_STAIRS)
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.PRISMARINE_SLAB)
                     .sound(SoundType.AMETHYST)
                     .strength(5f)));
+    public static final RegistryObject<Block> ALEXANDRITE_PRESSURE_PLATE = registerModBlock(
+            "alexandrite_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.copy(Blocks.PRISMARINE)
+                            .sound(SoundType.AMETHYST), BlockSetType.IRON));
+    public static final RegistryObject<Block> ALEXANDRITE_BUTTON = registerModBlock("alexandrite_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.PRISMARINE)
+                    .sound(SoundType.AMETHYST)
+                    .strength(5f), BlockSetType.IRON, 10, true));
 
     // Advanced blocks
     public static final RegistryObject<Block> SOUND_BLOCK = registerModBlock("sound_block", () -> new SoundBlock(

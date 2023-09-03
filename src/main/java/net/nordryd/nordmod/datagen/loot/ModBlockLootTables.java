@@ -26,6 +26,8 @@ public class ModBlockLootTables extends BlockLootSubProvider
         dropSelf(ModBlocks.SOUND_BLOCK.get());
         dropSelf(ModBlocks.ALEXANDRITE_STAIRS.get());
         dropSelf(ModBlocks.SOUND_BLOCK.get());
+        dropSelf(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.ALEXANDRITE_BUTTON.get());
 
         add(ModBlocks.ALEXANDRITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get()));

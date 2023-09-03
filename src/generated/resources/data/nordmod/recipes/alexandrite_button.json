@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "nordmod:alexandrite"
+    }
+  ],
+  "result": {
+    "item": "nordmod:alexandrite_button"
+  }
+}

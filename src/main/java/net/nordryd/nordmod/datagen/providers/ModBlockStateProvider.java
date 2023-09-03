@@ -2,6 +2,8 @@ package net.nordryd.nordmod.datagen.providers;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -21,13 +23,13 @@ public class ModBlockStateProvider extends BlockStateProvider
 
     @Override
     protected void registerStatesAndModels() {
-        this.simpleBlockWithItem(ModBlocks.ALEXANDRITE_BLOCK);
-        this.simpleBlockWithItem(ModBlocks.RAW_ALEXANDRITE_BLOCK);
+        simpleBlockWithItem(ModBlocks.ALEXANDRITE_BLOCK);
+        simpleBlockWithItem(ModBlocks.RAW_ALEXANDRITE_BLOCK);
 
-        this.simpleBlockWithItem(ModBlocks.ALEXANDRITE_ORE);
-        this.simpleBlockWithItem(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE);
-        this.simpleBlockWithItem(ModBlocks.NETHERRACK_ALEXANDRITE_ORE);
-        this.simpleBlockWithItem(ModBlocks.ENDSTONE_ALEXANDRITE_ORE);
+        simpleBlockWithItem(ModBlocks.ALEXANDRITE_ORE);
+        simpleBlockWithItem(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE);
+        simpleBlockWithItem(ModBlocks.NETHERRACK_ALEXANDRITE_ORE);
+        simpleBlockWithItem(ModBlocks.ENDSTONE_ALEXANDRITE_ORE);
 
         simpleBlockWithItem(ModBlocks.SOUND_BLOCK);
 
@@ -36,11 +38,16 @@ public class ModBlockStateProvider extends BlockStateProvider
                 blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
         blockItem(ModBlocks.ALEXANDRITE_STAIRS);
         blockItem(ModBlocks.ALEXANDRITE_SLAB);
+
+        buttonBlock((ButtonBlock) ModBlocks.ALEXANDRITE_BUTTON.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get(),
+                blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
+        blockItem(ModBlocks.ALEXANDRITE_PRESSURE_PLATE);
     }
 
     private void blockItem(final RegistryObject<Block> blockRegistryObject) {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(
-                ModNamespaceFactory.getModBlockNamespace() + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())
+                ModNamespaceFactory.getModNamespaceBlockPath() + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())
                         .getPath()));
     }
 
