@@ -16,7 +16,7 @@ public class ModCreativeModeTabs
             Registries.CREATIVE_MODE_TAB, NordMod.MOD_ID);
     public static final RegistryObject<CreativeModeTab> NORDMOD_ITEMS_TAB = MOD_CREATIVE_MODE_TABS.register(
             "nordmod_items_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ALEXANDRITE.get()))
-                    .title(Component.translatable("creativemodetab.nordmod_items_tab"))
+                    .title(Component.translatable("creativemodetab.nordmod.nordmod_items_tab"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.ALEXANDRITE.get());
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
@@ -28,7 +28,7 @@ public class ModCreativeModeTabs
     public static final RegistryObject<CreativeModeTab> NORDMOD_BLOCKS_TAB = MOD_CREATIVE_MODE_TABS.register(
             "nordmod_blocks_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ALEXANDRITE_BLOCK.get()))
-                    .title(Component.translatable("creativemodetab.nordmod_blocks_tab"))
+                    .title(Component.translatable("creativemodetab.nordmod.nordmod_blocks_tab"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
@@ -41,5 +41,8 @@ public class ModCreativeModeTabs
                         output.accept(ModBlocks.ALEXANDRITE_SLAB.get());
                         output.accept(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.ALEXANDRITE_BUTTON.get());
+                        output.accept(ModBlocks.ALEXANDRITE_FENCE.get());
+                        output.accept(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
+                        output.accept(ModBlocks.ALEXANDRITE_WALL.get());
                     }).build());
 }

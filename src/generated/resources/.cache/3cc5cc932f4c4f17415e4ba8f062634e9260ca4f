@@ -1,6 +1,8 @@
-// 1.20	2023-09-01T16:07:16.3692872	Item Models: nordmod
+// 1.20	2023-09-03T14:52:35.0319449	Item Models: nordmod
 fc3b4592c1d0628add5ad1c06bfde5d254e3d712 assets/nordmod/models/item/alexandrite.json
 593db9d0b94255abdc60e2eff108e66d75a365f7 assets/nordmod/models/item/alexandrite_button.json
+88ee900a4d44b09ac2cf1ea8c465548fc15f861d assets/nordmod/models/item/alexandrite_fence.json
+9728b420cc7407744cfd06a033c1ff37672d796a assets/nordmod/models/item/alexandrite_wall.json
 64015121c8055a4aa3e26c4fd2e7dc0dc7ddf494 assets/nordmod/models/item/kohlrabi.json
 5af668f971754e3446e2587314d1af54867dbd25 assets/nordmod/models/item/metal_detector.json
 19a964e15681023d32ee5561dce6ee31089ffd03 assets/nordmod/models/item/peat_brick.json

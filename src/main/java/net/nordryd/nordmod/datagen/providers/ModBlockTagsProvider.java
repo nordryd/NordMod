@@ -44,6 +44,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider
                 .add(ModBlocks.ENDSTONE_ALEXANDRITE_ORE.get())
                 .add(ModBlocks.ALEXANDRITE_STAIRS.get())
                 .add(ModBlocks.ALEXANDRITE_SLAB.get());
+
+        tag(BlockTags.FENCES).add(ModBlocks.ALEXANDRITE_FENCE.get());
+        tag(BlockTags.WALLS).add(ModBlocks.ALEXANDRITE_WALL.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
     }
 
     @Override

@@ -1,4 +1,7 @@
-// 1.20	2023-09-01T12:52:00.6523506	Block Tags
+// 1.20	2023-09-03T14:52:35.0339707	Block Tags
+ab83e0002ff8d1bed7a51c3d4cfbcc6fd18a0b1a data/minecraft/tags/blocks/fences.json
+0bc59e550acf45e9f989db248cc5a554be4740be data/minecraft/tags/blocks/fence_gates.json
 2da9ff8648669ee45f4364239f632e914e60a8b7 data/minecraft/tags/blocks/mineable/pickaxe.json
 2da9ff8648669ee45f4364239f632e914e60a8b7 data/minecraft/tags/blocks/needs_diamond_tool.json
+4b918a877393777ce17b70b7c102d3ece81ec5c3 data/minecraft/tags/blocks/walls.json
 86016658d6d7e05965b8b48094e7ef5ed0bd45e1 data/nordmod/tags/blocks/metal_detector_valuables.json

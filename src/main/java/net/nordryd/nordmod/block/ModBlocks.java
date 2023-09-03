@@ -2,6 +2,7 @@ package net.nordryd.nordmod.block;
 
 import java.util.function.Supplier;
 
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -9,10 +10,13 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -73,6 +77,16 @@ public class ModBlocks
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.PRISMARINE)
                     .sound(SoundType.AMETHYST)
                     .strength(5f), BlockSetType.IRON, 10, true));
+    public static final RegistryObject<Block> ALEXANDRITE_FENCE = registerModBlock("alexandrite_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .sound(SoundType.AMETHYST)
+                    .strength(5f)));
+    public static final RegistryObject<Block> ALEXANDRITE_FENCE_GATE = registerModBlock("alexandrite_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(5f), SoundEvents.CHERRY_WOOD_FENCE_GATE_OPEN, SoundEvents.CHERRY_WOOD_FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> ALEXANDRITE_WALL = registerModBlock("alexandrite_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(5f)));
 
     // Advanced blocks
     public static final RegistryObject<Block> SOUND_BLOCK = registerModBlock("sound_block", () -> new SoundBlock(

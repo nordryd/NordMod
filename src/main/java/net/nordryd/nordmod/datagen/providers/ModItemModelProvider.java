@@ -16,7 +16,6 @@ import net.nordryd.nordmod.util.ModNamespaceFactory;
 
 public class ModItemModelProvider extends ItemModelProvider
 {
-
     public ModItemModelProvider(final PackOutput packOutput, final ExistingFileHelper existingFileHelper) {
         super(packOutput, NordMod.MOD_ID, existingFileHelper);
     }
@@ -30,6 +29,8 @@ public class ModItemModelProvider extends ItemModelProvider
         simpleItem(ModItems.METAL_DETECTOR);
 
         buttonItem(ModBlocks.ALEXANDRITE_BUTTON, ModBlocks.ALEXANDRITE_BLOCK);
+        fenceItem(ModBlocks.ALEXANDRITE_FENCE, ModBlocks.ALEXANDRITE_BLOCK);
+        wallItem(ModBlocks.ALEXANDRITE_WALL, ModBlocks.ALEXANDRITE_BLOCK);
     }
 
     private void buttonItem(final RegistryObject<Block> buttonBlock, final RegistryObject<Block> baseTextureBlock) {
@@ -38,6 +39,20 @@ public class ModItemModelProvider extends ItemModelProvider
                 new ResourceLocation(ModNamespaceFactory.getModNamespaceBlockPath() +
                         ForgeRegistries.BLOCKS.getKey(baseTextureBlock.get())
                                 .getPath()));
+    }
+
+    private void fenceItem(final RegistryObject<Block> block, final RegistryObject<Block> baseBlock) {
+        withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get())
+                .getPath(), mcLoc(ModNamespaceFactory.getBlockPath("fence_inventory"))).texture("texture",
+                new ResourceLocation(NordMod.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get())
+                        .getPath()));
+    }
+
+    private void wallItem(final RegistryObject<Block> block, final RegistryObject<Block> baseBlock) {
+        withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get())
+                .getPath(), mcLoc(ModNamespaceFactory.getBlockPath("wall_inventory"))).texture("wall",
+                new ResourceLocation(NordMod.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get())
+                        .getPath()));
     }
 
     private ItemModelBuilder simpleItem(final RegistryObject<Item> itemRegistryObject) {

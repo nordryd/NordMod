@@ -13,6 +13,7 @@ import net.nordryd.nordmod.NordMod;
 import net.nordryd.nordmod.datagen.providers.ModBlockStateProvider;
 import net.nordryd.nordmod.datagen.providers.ModBlockTagsProvider;
 import net.nordryd.nordmod.datagen.providers.ModItemModelProvider;
+import net.nordryd.nordmod.datagen.providers.ModLanguageProvider;
 import net.nordryd.nordmod.datagen.providers.ModLootTableProvider;
 import net.nordryd.nordmod.datagen.providers.ModRecipeProvider;
 
@@ -36,5 +37,6 @@ public class ModDataGenerators
                 new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper));
         dataGenerator.addProvider(gdEvent.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
         dataGenerator.addProvider(gdEvent.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
+        dataGenerator.addProvider(gdEvent.includeClient(), new ModLanguageProvider(packOutput));
     }
 }
