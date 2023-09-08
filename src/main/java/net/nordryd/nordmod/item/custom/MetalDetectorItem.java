@@ -56,22 +56,21 @@ public class MetalDetectorItem extends Item
     @Override
     public void appendHoverText(final ItemStack pItemStack, @Nullable final Level pLevel,
             final List<Component> pTooltip, final TooltipFlag pAdvanced) {
-        final String translationKey = ModLanguageKeyFactory.getKey(this);
         if (Screen.hasShiftDown()) {
-            pTooltip.add(Component.translatable(translationKey + "tooltip.shift"));
+            pTooltip.add(Component.translatable(ModLanguageKeyFactory.getKey(this, "tooltip.shift")));
         }
         else {
-            pTooltip.add(Component.translatable(translationKey + "tooltip"));
+            pTooltip.add(Component.translatable(ModLanguageKeyFactory.getKey(this, "tooltip")));
         }
         super.appendHoverText(pItemStack, pLevel, pTooltip, pAdvanced);
     }
 
     private void outputNoValuableFound(final Player player) {
-        player.sendSystemMessage(Component.translatable(ModLanguageKeyFactory.getKey(this) + "no_valuables_found"));
+        player.sendSystemMessage(Component.translatable(ModLanguageKeyFactory.getKey(this, "no_valuables_found")));
     }
 
     private void outputValuableMetalPosition(final BlockPos blockPos, final Player player, final Block block) {
-        player.sendSystemMessage(Component.translatable(ModLanguageKeyFactory.getKey(this) + "valuable_found",
+        player.sendSystemMessage(Component.translatable(ModLanguageKeyFactory.getKey(this, "valuable_found"),
                 I18n.get(block.getDescriptionId()), blockPos.getX(), blockPos.getY(), blockPos.getZ()));
     }
 
